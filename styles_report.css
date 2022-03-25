@@ -1,0 +1,63 @@
+/*
+Colors used by Gallup
+---------------------------------------------------
+Strategic Thinking     |  #00945d  |  (Green)
+Relationship Building  |  #0070cd  |  (Blue)
+Influencing            |  #e97201  |  (Orange)
+Executing              |  #7b2481  |  (Purple)
+---------------------------------------------------
+*/
+
+/* Main */
+
+@media print {
+    div {
+        -webkit-print-color-adjust: exact !important;
+}
+}
+
+h1 {
+    text-align: center;
+    margin: 3% 0% 5%;
+}
+
+
+/* Classes */
+
+.report-container {
+    margin: 0% 20% 0% 20%;
+    /*border-style: solid;*/
+    justify-content: center;
+}
+
+.main-container {
+    margin: 0% 20% 0% 5%;
+    /*border-style: solid;*/
+    justify-content: center;
+    
+    /*CSS Grid Shenanigans*/
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 80px 80px;
+}
+
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.text {
+    border: 1px solid black;
+    padding: 1%;
+}
+
+.header {
+    background-color: a2c4c9;
+    font-size: large;
+    padding-left: 1%;
+    
+}
+
+
+
+

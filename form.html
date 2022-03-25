@@ -1,0 +1,70 @@
+<div class=form-container>
+
+    <h1>CliftonStrengths Form</h1>
+
+    <form id="form" action="/when_managing.php" onsubmit="validateForm()" method="post">
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-5">
+            <input name= "firstname" type="text" class="form-control" placeholder="First name">
+            </div>
+            <div class="col-5">
+            <input name= "lastname" type="text" class="form-control" placeholder="Last name">
+            </div>
+            <div class="col-1"></div>
+        </div>
+
+        <div class="top-five">
+            <h3>Top Five CliftonStrengths</h3>
+            <div class="form-group row">
+                <div class="col-2">
+                    <label for="First">1: </label>
+                </div>
+                <div class="col-8">
+                    <input list="CliftonStrengths" id="ListSelection" name="First" />
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-2">
+                    <label for="Second">2: </label>
+                </div>
+                <div class="col-8">
+                    <input list="CliftonStrengths" id="ListSelection" name="Second" />
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-2">
+                    <label for="Third">3: </label>
+                </div>
+                <div class="col-8">
+                    <input list="CliftonStrengths" id="ListSelection" name="Third" />
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-2">
+                    <label for="Fourth">4: </label>
+                </div>
+                <div class="col-8">
+                    <input list="CliftonStrengths" id="ListSelection" name="Fourth" />
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-2">
+                    <label for="Fifth">5: </label>
+                </div>
+                <div class="col-8">
+                    <input list="CliftonStrengths" id="ListSelection" name="Fifth" />
+                </div>
+            </div>
+        </div>
+
+        <div class = "row">
+            <div class="col-4"></div>
+            <div class="col-4 text-center">
+                <button type="submit" class="btn btn-primary mb-2">Generate Report</button>
+            </div>
+            <div class="col-4"></div>
+        </div>
+    </form>
+
+</div>
