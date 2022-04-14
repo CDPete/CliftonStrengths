@@ -14,7 +14,7 @@ function genSelfSection()
   "Belief" => 10, "Command" => 12, "Communication" => 14, "Competition" => 16, "Connectedness" => 18,"Consistency" => 20,
   "Context" => 22,"Deliberative" => 24,"Developer" => 26,"Discipline" => 28,"Empathy" => 30,"Focus" => 32,"Futuristic" => 34,
   "Harmony" => 36,"Ideation" => 38,"Includer" => 40,"Individualization" => 42,"Input" => 44,"Intellection" => 46,
-  "Learner" => 48,"Maximizer" => 50,"Positivity" => 52,"Relator" => 54,"Responsibilty" => 56,"Restorative" => 58,
+  "Learner" => 48,"Maximizer" => 50,"Positivity" => 52,"Relator" => 54,"Responsibility" => 56,"Restorative" => 58,
   "Self-Assurance" => 60,"Significance" => 62,"Strategic" => 64,"Woo" => 66,);
     
   #Function inputs
@@ -114,7 +114,7 @@ function genOtherSection()
   "Command" => 13, "Communication" => 15, "Competition" => 17, "Connectedness" => 19,"Consistency" => 21,"Context" => 23,
   "Deliberative" => 25,"Developer" => 27,"Discipline" => 29,"Empathy" => 31,"Focus" => 33,"Futuristic" => 35,"Harmony" => 37,
   "Ideation" => 39,"Includer" => 41,"Individualization" => 43,"Input" => 45,"Intellection" => 47,"Learner" => 49,"Maximizer" => 51,
-  "Positivity" => 53,"Relator" => 55,"Responsibilty" => 57,"Restorative" => 59,"Self-Assurance" => 61,"Significance" => 63,
+  "Positivity" => 53,"Relator" => 55,"Responsibility" => 57,"Restorative" => 59,"Self-Assurance" => 61,"Significance" => 63,
   "Strategic" => 65,"Woo" => 67,);
     
   #Function inputs

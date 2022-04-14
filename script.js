@@ -22,6 +22,19 @@ function validateForm() {
     //Check if strengths have been filled out
     if (first == "" || second == "" || third == "" || fourth == "" || fifth == "") {
         alert("Must fill out CliftonStrengths")
+        const form = document.getElementById("form");
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+        });
+        window.history.back();
+        return false;
+    }
+
+    //Check if strength has already been used
+    const duplicate = new Set([first, second, third, fourth, fifth])
+    if (duplicate.size < 5) {
+        alert("Cannot have duplicate strengths")
+        window.history.back();
         return false;
     }
 
