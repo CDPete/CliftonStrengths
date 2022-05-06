@@ -24,7 +24,7 @@
 
         foreach ($form_parameters as $parameter) {
             $$parameter = "";
-            $$parameter = $_POST["$parameter"]; 
+            $$parameter = ucfirst(strtolower($_POST["$parameter"])); 
             ${"style_$parameter"} = "font-weight: bold; font-size: large; border: 1px solid black; text-align: center; ";
             
             if (in_array($$parameter, $strategic_thinking)) {

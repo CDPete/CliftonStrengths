@@ -18,8 +18,6 @@ function validateForm(event) {
     var fourth = document.forms["form"]["Fourth"].value;
     var fifth = document.forms["form"]["Fifth"].value;
 
-    
-
     //Check if strengths have been filled out
     if (first == "" || second == "" || third == "" || fourth == "" || fifth == "") {
         alert("Must fill out CliftonStrengths")
@@ -34,6 +32,12 @@ function validateForm(event) {
         event.preventDefault();
         return false;
     }
-
     
+    if (!validStrengths.includes(first) || !validStrengths.includes(second) || !validStrengths.includes(third) || 
+        !validStrengths.includes(fourth) || !validStrengths.includes(fifth)) {
+        alert("One or more of your strengths are invalid");
+        event.preventDefault();
+        return false;
+    }
+
 }
