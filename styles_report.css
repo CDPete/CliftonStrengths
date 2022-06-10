@@ -12,8 +12,16 @@ Executing              |  #7b2481  |  (Purple)
 
 @media print {
     div {
-        -webkit-print-color-adjust: exact !important;
+        -webkit-print-color-adjust: exact !important;              
 }
+    .text {
+        page-break-inside: avoid !important;
+    }
+
+    .section {
+        display: block;
+    }
+
 }
 
 h1 {
@@ -38,17 +46,19 @@ h1 {
     /*CSS Grid Shenanigans*/
     display: grid;
     grid-template-columns: 20% 80%;
-    grid-template-rows: 80px 80px;
+    /*grid-template-rows: 120px 120px;*/
 }
 
 .section {
     display: flex;
     justify-content: center;
     align-items: center;
+   
 }
 .text {
     border: 1px solid black;
     padding: 2% 1% 2% 1%;
+    
 }
 
 .header {
