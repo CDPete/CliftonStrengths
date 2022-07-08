@@ -48,7 +48,9 @@
     <div class= "text-right">
             <div>&nbsp</div>
             <button type="button" onclick="window.location='index.php';" class="btn btn-secondary btn-lg">New Report</button>
-            <button type="button" onclick="window.print()" class="btn btn-secondary btn-lg">Print Page</button>
+            <iframe src="printable_managing_others.php" style="visibility:hidden; height:1px; width:1px" name= "frame"></iframe> 
+            <!-- <button type="button" onclick="window.print()" class="btn btn-secondary btn-lg">Print Page</button> -->
+            <input type="button" onclick="frames['frame'].print()" class="btn btn-secondary btn-lg" value="Print Page">
         </div>
     
         

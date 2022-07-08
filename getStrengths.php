@@ -22,7 +22,7 @@ function genSelfSection()
   $style1 = func_get_args()[1];
 
   #Titular strength display
-  echo '<div class= "section breaker" style= "' . $style1 . '">' . $strength . '</div>';
+  echo '<div class= "section" style= "' . $style1 . '">' . $strength . '</div>';
 
   #Actual mapping of the array occurs here
   $csv = array_map("str_getcsv", file("CliftonWebsiteHelper4.csv",FILE_SKIP_EMPTY_LINES));
@@ -122,7 +122,7 @@ function genOtherSection()
   $style1 = func_get_args()[1];
 
   #Titular strength display
-  echo '<div class= "section breaker" style= "' . $style1 . '">' . $strength . '</div>';
+  echo '<div class= "section" style= "' . $style1 . '">' . $strength . '</div>';
 
   #Actual mapping of the array occurs here
   $csv = array_map("str_getcsv", file("CliftonWebsiteHelper4.csv",FILE_SKIP_EMPTY_LINES));

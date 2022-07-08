@@ -1,3 +1,14 @@
+<?php 
+        /*Sessions test*/
+        session_start();
+        $_SESSION["firstname"] = $_POST["firstname"];
+        $_SESSION["lastname"] = $_POST["lastname"];
+        $_SESSION["First"] = $_POST["First"];
+        $_SESSION["Second"] = $_POST["Second"];
+        $_SESSION["Third"] = $_POST["Third"];
+        $_SESSION["Fourth"] = $_POST["Fourth"];
+        $_SESSION["Fifth"] = $_POST["Fifth"];
+?>
 <html>
     <head>
         <!-- Bootstrap, Dependencies, and CSS styles -->
@@ -51,7 +62,10 @@
         <div class= "text-right">
             <div>&nbsp</div>
             <button type="button" onclick="window.location='index.php';" class="btn btn-secondary btn-lg">New Report</button>
-            <button type="button" onclick="window.print()" class="btn btn-secondary btn-lg">Print Page</button>
+            
+            <iframe src="printable_when_managing.php" style="visibility:hidden; height:1px; width:1px" name= "frame"></iframe> 
+           <!-- <button type="button" onclick="window.print()" class="btn btn-secondary btn-lg">Print Page</button> -->
+            <input type="button" onclick="frames['frame'].print()" class="btn btn-secondary btn-lg" value="Print Page"> 
         </div>
         
         <h1 style= "background-color: a2c4c9; padding-bottom: 1%;">When You're Managing</h1>
@@ -73,8 +87,6 @@
     </div>
 
     <div class= "main-container">
-
-        
         <?php echo genSelfSection($First, $style_First); ?>
         <?php echo genSelfSection($Second, $style_Second); ?>
         <?php echo genSelfSection($Third, $style_Third); ?>
