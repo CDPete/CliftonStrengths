@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <html>
 <head>
         <!-- Bootstrap, Dependencies, and CSS styles -->
@@ -10,9 +11,9 @@
         /* Variables from form */
         
         $firstname = "";
-        $firstname = $_POST["firstname"];
+        $firstname = $_SESSION["firstname"];
         $lastname = "";
-        $lastname = $_POST["lastname"];
+        $lastname = $_SESSION["lastname"];
         $form_parameters= array("First", "Second", "Third", "Fourth", "Fifth");
         
         /* CliftonStrength Categories */
@@ -24,7 +25,7 @@
 
         foreach ($form_parameters as $parameter) {
             $$parameter = "";
-            $$parameter = ucfirst(strtolower($_POST["$parameter"])); 
+            $$parameter = ucfirst(strtolower($_SESSION["$parameter"])); 
             ${"style_$parameter"} = "font-weight: bold; font-size: large; border: 1px solid black; text-align: center; ";
             
             if (in_array($$parameter, $strategic_thinking)) {

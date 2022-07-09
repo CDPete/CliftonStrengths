@@ -1,13 +1,16 @@
 <?php 
         /*Sessions test*/
         session_start();
-        $_SESSION["firstname"] = $_POST["firstname"];
-        $_SESSION["lastname"] = $_POST["lastname"];
-        $_SESSION["First"] = $_POST["First"];
-        $_SESSION["Second"] = $_POST["Second"];
-        $_SESSION["Third"] = $_POST["Third"];
-        $_SESSION["Fourth"] = $_POST["Fourth"];
-        $_SESSION["Fifth"] = $_POST["Fifth"];
+
+        $_SESSION["firstname"] = $_GET["firstname"];
+        $_SESSION["lastname"] = $_GET["lastname"];
+        $_SESSION["First"] = $_GET["First"];
+        $_SESSION["Second"] = $_GET["Second"];
+        $_SESSION["Third"] = $_GET["Third"];
+        $_SESSION["Fourth"] = $_GET["Fourth"];
+        $_SESSION["Fifth"] = $_GET["Fifth"]; 
+        
+
 ?>
 <html>
     <head>
@@ -20,9 +23,9 @@
 
         /* Variables from form */
         $firstname = "";
-        $firstname = $_POST["firstname"];
+        $firstname = $_SESSION["firstname"];
         $lastname = "";
-        $lastname = $_POST["lastname"];
+        $lastname = $_SESSION["lastname"];
         $form_parameters= array("First", "Second", "Third", "Fourth", "Fifth");
         
         /* CliftonStrength Categories */
@@ -34,7 +37,7 @@
 
         foreach ($form_parameters as $parameter) {
             $$parameter = "";
-            $$parameter = ucfirst(strtolower($_POST["$parameter"])); 
+            $$parameter = ucfirst(strtolower($_SESSION["$parameter"])); 
     
             ${"style_$parameter"} = "font-weight: bold; font-size: large; border: 1px solid black; text-align: center; ";
             
@@ -101,13 +104,6 @@
                 <div class= "p-2"> <button type="button" onclick="history.back()" class="btn btn-secondary btn-lg">Previous Page</button></div>
                 
                 <div class= "p-2"> <form method= "post" action="/managing_others.php">
-                    <input type="hidden" name="firstname" value="<?php echo $_POST["firstname"]; ?>"/>
-                    <input type="hidden" name="lastname" value="<?php echo $_POST["lastname"]; ?>"/>
-                    <input type="hidden" name="First" value="<?php echo $_POST["First"]; ?>"/>
-                    <input type="hidden" name="Second" value="<?php echo $_POST["Second"]; ?>"/>
-                    <input type="hidden" name="Third" value="<?php echo $_POST["Third"]; ?>"/>
-                    <input type="hidden" name="Fourth" value="<?php echo $_POST["Fourth"]; ?>"/>
-                    <input type="hidden" name="Fifth" value="<?php echo $_POST["Fifth"]; ?>"/>
                     <button type="submit" class="btn btn-secondary btn-lg">Managing Others</button>
                 </form>
                 </div>
